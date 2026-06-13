@@ -963,6 +963,8 @@ body.calm { --accent: #6670c8; --shadow: 0 18px 45px rgba(83,88,132,.12); }
   }
   .home-page .shell {
     height: calc(100svh - 16px);
+    min-height: 0;
+    overflow: hidden;
   }
   .inner-page .section {
     min-height: auto;
@@ -1001,37 +1003,44 @@ body.calm { --accent: #6670c8; --shadow: 0 18px 45px rgba(83,88,132,.12); }
   .design-home {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 20px 10px 10px;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    padding: 26px 24px 0;
     align-content: start;
+    isolation: isolate;
+  }
+  .design-home::after {
+    content: "";
+    position: absolute;
+    inset: 120px -120px 40px 34%;
+    z-index: 0;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 50% 35%, rgba(119,130,220,.16), transparent 48%),
+      linear-gradient(135deg, rgba(255,255,255,.25), rgba(119,130,220,.09));
+    filter: blur(18px);
+    pointer-events: none;
   }
   .design-home .hero-copy {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: none;
     padding-top: 0;
   }
   .design-home .hero-copy h1 {
-    font-size: clamp(33px, 10vw, 40px);
-    line-height: 1;
-    margin-bottom: 10px;
+    font-size: clamp(48px, 13.8vw, 58px);
+    line-height: .98;
+    margin-bottom: 18px;
   }
   .design-home .hero-copy p {
-    max-width: 300px;
-    font-size: 13px;
+    max-width: 330px;
+    font-size: 17px;
+    line-height: 1.5;
   }
   .design-home .hero-stage {
-    grid-column: 1;
-    grid-row: auto;
-    min-height: 295px;
-    margin-top: 0;
-  }
-  .design-home .building {
-    width: 124%;
-    right: -74px;
-    top: -6px;
-  }
-  .design-home .uptime-card {
-    width: 132px;
-    top: 0;
-    right: 0;
-    padding: 10px;
+    display: none;
   }
   .metric-row {
     display: block;
@@ -1046,11 +1055,7 @@ body.calm { --accent: #6670c8; --shadow: 0 18px 45px rgba(83,88,132,.12); }
     display: none;
   }
   .design-home .ai-card {
-    width: min(250px, 76vw);
-    right: 2px;
-    bottom: 0;
-    min-height: 118px;
-    padding: 12px;
+    display: none;
   }
   .design-home .ai-card h3 {
     font-size: 15px;
@@ -1084,14 +1089,15 @@ body.calm { --accent: #6670c8; --shadow: 0 18px 45px rgba(83,88,132,.12); }
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
-    margin: 14px 0;
+    width: min(318px, 100%);
+    margin: 22px 0 0;
   }
   .hero .btn {
     min-height: 48px;
     padding-inline: 14px;
   }
   .hero .btn.ghost {
-    width: fit-content;
+    width: 100%;
   }
   .round-arrow,
   .play {
@@ -1155,6 +1161,20 @@ body.calm { --accent: #6670c8; --shadow: 0 18px 45px rgba(83,88,132,.12); }
   .dash-chart { height: 120px; }
   .outcomes { grid-template-columns: repeat(3, 1fr); }
   .contact-cards { grid-template-columns: 1fr; }
+  .home-page .footer {
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    margin-top: auto;
+    padding: 0 24px 8px;
+  }
+  .home-page .footer img {
+    display: none;
+  }
+  .home-page .footer p {
+    grid-column: 1 / -1;
+    order: 5;
+    font-size: 14px;
+  }
   .footer { grid-template-columns: 1fr auto 1fr; padding-inline: 8px; }
   .footer p { grid-column: 1 / -1; order: 5; }
   .footer > a { display: none; }
