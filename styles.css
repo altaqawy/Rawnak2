@@ -372,6 +372,10 @@ p { color: var(--muted); line-height: 1.65; font-size: 17px; }
   transition: .28s ease;
 }
 .work-card img, .dashboard-art { width: 220px; height: 150px; object-fit: cover; border-radius: 18px; }
+.screen-asset {
+  mix-blend-mode: screen;
+  filter: brightness(1.08) contrast(1.02);
+}
 .work-card small { text-transform: uppercase; color: #6973d8; font-weight: 700; letter-spacing: .6px; }
 .work-card h3 { margin: 7px 0; font-size: 28px; }
 .work-card span { color: #6874d8; font-weight: 700; }
