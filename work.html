@@ -3,23 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rawnak Agency</title>
+    <title>Work | Rawnak Agency</title>
     <meta
       name="description"
       content="Rawnak Agency builds websites, brands, AI solutions, and automation systems for ambitious businesses."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="home-page">
+  <body class="inner-page">
     <div class="ambient-bg" aria-hidden="true">
       <img src="assets/mountains.jpg" alt="" class="mountain-layer" />
       <img src="assets/wave.jpg" alt="" class="wave-layer" />
     </div>
 
     <aside class="side-nav" aria-label="Page navigation">
-      <a class="side-dot active" href="index.html" aria-label="Home" data-icon="home"></a>
+      <a class="side-dot" href="index.html" aria-label="Home" data-icon="home"></a>
       <a class="side-dot" href="services.html" aria-label="Services" data-icon="grid"></a>
-      <a class="side-dot" href="work.html" aria-label="Work" data-icon="chat"></a>
+      <a class="side-dot active" href="work.html" aria-label="Work" data-icon="chat"></a>
       <a class="side-dot" href="about.html" aria-label="About" data-icon="user"></a>
       <span class="side-line"></span>
       <a class="side-dot" href="pricing.html" aria-label="Pricing" data-icon="gear"></a>
@@ -33,11 +33,11 @@
           <span><strong>RAWNAK</strong><small>AGENCY</small></span>
         </a>
         <nav class="desktop-nav" aria-label="Primary navigation">
-          <a href="index.html" class="active">Home</a>
+          <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="services.html">Services</a>
           <a href="industries.html">Industries</a>
-          <a href="work.html">Work</a>
+          <a href="work.html" class="active">Work</a>
           <a href="process.html">Process</a>
           <a href="pricing.html">Pricing</a>
           <a href="contact.html">Contact</a>
@@ -49,53 +49,33 @@
       </header>
 
       <nav class="mobile-menu" aria-label="Mobile navigation">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="industries.html">Industries</a>
-        <a href="work.html">Work</a>
+        <a href="work.html" class="active">Work</a>
         <a href="process.html">Process</a>
         <a href="pricing.html">Pricing</a>
         <a href="contact.html">Contact</a>
       </nav>
 
-      <section id="home" class="hero section">
-        <div class="hero-copy reveal">
-          <span class="eyebrow">We Build The Future</span>
-          <h1>A New Way to Build <span>Digital Presence</span></h1>
-          <p>
-            We craft high-performance websites, strategic brands, intelligent AI systems, and
-            seamless automation that help businesses grow.
-          </p>
-          <div class="actions">
-            <a class="btn primary magnetic" href="contact.html"><span class="round-arrow">↗</span> Start Your Project <span>→</span></a>
-            <a class="btn ghost" href="work.html"><span class="play">▷</span> See Our Work</a>
-          </div>
-          <div class="quick-stats">
-            <div><strong>120+</strong><span>Projects Delivered</span></div>
-            <div><strong>98%</strong><span>Client Satisfaction</span></div>
-            <div><strong>6+</strong><span>Years of Impact</span></div>
-          </div>
+      <section id="work" class="section work">
+        <div class="section-head reveal">
+          <span class="eyebrow">Our Work</span>
+          <h2>Our <span>Work</span></h2>
+          <p>Recent digital experiences, brands, and intelligent systems that drive measurable growth.</p>
         </div>
-
-        <div class="hero-stage reveal delay-1">
-          <img class="building" src="assets/building.jpg" alt="Futuristic glass building" />
-          <div class="metric-card floating one">
-            <span>System Uptime</span>
-            <strong>99.9%</strong>
-            <div class="sparkline"></div>
-          </div>
-          <div class="metric-card floating two">
-            <span>Traffic Growth</span>
-            <strong>+156%</strong>
-            <div class="sparkline alt"></div>
-          </div>
-          <div class="ai-card floating three">
-            <div class="icon chip">✦</div>
-            <h3>AI-Powered Business Systems</h3>
-            <p>Smart workflows, insights, and automations that scale with your team.</p>
-            <div class="tags"><span>AI Integration</span><span>Real-time Insights</span></div>
-          </div>
+        <div class="filter-bar reveal" role="tablist" aria-label="Work filters">
+          <button class="active" data-filter="all" type="button">All</button>
+          <button data-filter="website" type="button">Websites</button>
+          <button data-filter="branding" type="button">Branding</button>
+          <button data-filter="ai" type="button">AI</button>
+          <button data-filter="automation" type="button">Automation</button>
+        </div>
+        <div class="work-grid">
+          <article class="work-card reveal" data-kind="website"><img class="screen-asset" src="assets/building.jpg" alt=""><div><small>Website Design</small><h3>Aurelia Wellness</h3><p>Elegant UX and conversion-focused design.</p><span>+156% Traffic</span></div><a href="case-study.html">↗</a></article>
+          <article class="work-card reveal" data-kind="branding"><img src="assets/work-reference.jpg" alt=""><div><small>Branding</small><h3>Lumina Identity</h3><p>Clarity, purpose, and timeless sophistication.</p><span>4.9/5 Rating</span></div><a href="case-study.html">↗</a></article>
+          <article class="work-card reveal" data-kind="ai automation"><div class="dashboard-art"><span></span><span></span><span></span></div><div><small>AI & Automation</small><h3>NovaFlow AI Platform</h3><p>Automation platform that streamlines operations.</p><span>+2.4M Revenue</span></div><a href="case-study.html">↗</a></article>
         </div>
       </section>
 

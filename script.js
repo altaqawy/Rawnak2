@@ -4,6 +4,14 @@ const navLinks = document.querySelectorAll(".desktop-nav a, .mobile-menu a, .sid
 const sections = [...document.querySelectorAll("section[id]")];
 const revealItems = document.querySelectorAll(".reveal");
 
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+const activePage = currentPage === "case-study.html" ? "work.html" : currentPage;
+navLinks.forEach((link) => {
+  const href = link.getAttribute("href");
+  if (!href || href.startsWith("#")) return;
+  link.classList.toggle("active", href === activePage);
+});
+
 menuButton?.addEventListener("click", () => {
   const open = mobileMenu.classList.toggle("open");
   menuButton.setAttribute("aria-expanded", String(open));
@@ -26,19 +34,21 @@ const revealObserver = new IntersectionObserver(
 );
 revealItems.forEach((item) => revealObserver.observe(item));
 
-const navObserver = new IntersectionObserver(
-  (entries) => {
-    const visible = entries
-      .filter((entry) => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-    if (!visible) return;
-    navLinks.forEach((link) => {
-      link.classList.toggle("active", link.getAttribute("href") === `#${visible.target.id}`);
-    });
-  },
-  { rootMargin: "-35% 0px -55% 0px", threshold: [0.08, 0.2, 0.5] }
-);
-sections.forEach((section) => navObserver.observe(section));
+if ([...navLinks].some((link) => link.getAttribute("href")?.startsWith("#"))) {
+  const navObserver = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!visible) return;
+      navLinks.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${visible.target.id}`);
+      });
+    },
+    { rootMargin: "-35% 0px -55% 0px", threshold: [0.08, 0.2, 0.5] }
+  );
+  sections.forEach((section) => navObserver.observe(section));
+}
 
 document.querySelectorAll(".filter-bar button").forEach((button) => {
   button.addEventListener("click", () => {
