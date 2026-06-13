@@ -7,6 +7,7 @@ const revealItems = document.querySelectorAll(".reveal");
 const currentPage = window.location.pathname.split("/").pop() || "index.html";
 const activePage = currentPage === "case-study.html" ? "work.html" : currentPage;
 navLinks.forEach((link) => {
+  if (document.body.classList.contains("home-page") && link.closest(".home-service-nav")) return;
   const href = link.getAttribute("href");
   if (!href || href.startsWith("#")) return;
   link.classList.toggle("active", href === activePage);

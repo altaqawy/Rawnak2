@@ -32,17 +32,13 @@
           <img src="assets/logo-mark.png" alt="" />
           <span><strong>RAWNAK</strong><small>AGENCY</small></span>
         </a>
-        <nav class="desktop-nav" aria-label="Primary navigation">
-          <a href="index.html" class="active">Home</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="industries.html">Industries</a>
-          <a href="work.html">Work</a>
-          <a href="process.html">Process</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="contact.html">Contact</a>
+        <nav class="desktop-nav home-service-nav" aria-label="Primary services">
+          <a href="services.html" class="active"><span class="nav-icon nav-dot"></span> Websites</a>
+          <a href="services.html"><span class="nav-icon nav-pencil"></span> Branding</a>
+          <a href="services.html"><span class="nav-icon nav-spark"></span> AI Solutions</a>
+          <a href="services.html"><span class="nav-icon nav-gear"></span> Automation</a>
         </nav>
-        <a class="btn primary small" href="contact.html">Start Project <span>?</span></a>
+        <a class="btn primary small" href="contact.html">Start Project <span>&#8599;</span></a>
         <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -59,51 +55,92 @@
         <a href="contact.html">Contact</a>
       </nav>
 
-      <section id="home" class="hero section">
+      <section id="home" class="hero section design-home">
         <div class="hero-copy reveal">
-          <span class="eyebrow">We Build The Future</span>
           <h1>A New Way to Build <span>Digital Presence</span></h1>
           <p>
             We craft high-performance websites, strategic brands, intelligent AI systems, and
             seamless automation that help businesses grow.
           </p>
           <div class="actions">
-            <a class="btn primary magnetic" href="contact.html"><span class="round-arrow">↗</span> Start Your Project <span>→</span></a>
-            <a class="btn ghost" href="work.html"><span class="play">▷</span> See Our Work</a>
-          </div>
-          <div class="quick-stats">
-            <div><strong>120+</strong><span>Projects Delivered</span></div>
-            <div><strong>98%</strong><span>Client Satisfaction</span></div>
-            <div><strong>6+</strong><span>Years of Impact</span></div>
+            <a class="btn primary magnetic" href="services.html">Explore Services <span>&#8599;</span></a>
+            <a class="btn ghost" href="work.html"><span class="play">&#9655;</span> Watch Showreel</a>
           </div>
         </div>
 
         <div class="hero-stage reveal delay-1">
-          <img class="building" src="assets/building.jpg" alt="Futuristic glass building" />
-          <div class="metric-card floating one">
-            <span>System Uptime</span>
-            <strong>99.9%</strong>
-            <div class="sparkline"></div>
-          </div>
-          <div class="metric-card floating two">
-            <span>Traffic Growth</span>
-            <strong>+156%</strong>
-            <div class="sparkline alt"></div>
+          <img class="building" src="assets/building-cutout.png" alt="Futuristic glass building" />
+          <div class="metric-card uptime-card floating one">
+            <div class="metric-row">
+              <span>System Uptime</span>
+              <strong>99.9%</strong>
+              <div class="sparkline"></div>
+            </div>
+            <div class="metric-row">
+              <span>Performance</span>
+              <strong>+42%</strong>
+              <small>vs last 30 days</small>
+              <div class="sparkline alt"></div>
+            </div>
+            <div class="metric-row">
+              <span>Traffic Growth</span>
+              <strong>+156%</strong>
+              <small>vs last month</small>
+              <div class="sparkline"></div>
+            </div>
           </div>
           <div class="ai-card floating three">
-            <div class="icon chip">✦</div>
+            <div class="icon chip"><span></span></div>
             <h3>AI-Powered Business Systems</h3>
-            <p>Smart workflows, insights, and automations that scale with your team.</p>
-            <div class="tags"><span>AI Integration</span><span>Real-time Insights</span></div>
+            <p>Unlock efficiency and intelligence with custom AI solutions, automation workflows, and real-time insights.</p>
+            <div class="tags"><span>AI Integration</span><span>Workflow Automation</span><span>Data Intelligence</span></div>
+            <div class="wave-mini" aria-hidden="true"></div>
           </div>
+        </div>
+
+        <div class="strategy-card reveal delay-1">
+          <h3>Strategy. Data. Growth.</h3>
+          <p>We combine data, creativity, and technology to design strategies that deliver measurable results and long-term growth.</p>
+          <div class="strategy-stats">
+            <div><strong>120+</strong><span>Projects Delivered</span></div>
+            <div><strong>98%</strong><span>Client Satisfaction</span></div>
+            <div><strong>4.9/5</strong><span>Avg Rating</span></div>
+          </div>
+          <div class="avatar-row"><span></span><span></span><span></span><span></span><span></span><b>+</b></div>
+          <div class="bars">
+            <label>Strategy <i style="--w:92%"></i><em>92%</em></label>
+            <label>Design <i style="--w:88%"></i><em>88%</em></label>
+            <label>Development <i style="--w:95%"></i><em>95%</em></label>
+            <label>Automation <i style="--w:90%"></i><em>90%</em></label>
+          </div>
+        </div>
+
+        <div class="home-process reveal">
+          <h3>Our Process. Built for Impact.</h3>
+          <div class="process-line">
+            <div><span></span><strong>1</strong><small>Discover</small></div>
+            <div><span></span><strong>2</strong><small>Strategize</small></div>
+            <div><span></span><strong>3</strong><small>Build</small></div>
+            <div><span></span><strong>4</strong><small>Automate</small></div>
+            <div><span></span><strong>5</strong><small>Scale</small></div>
+          </div>
+        </div>
+
+        <div class="impact-strip reveal">
+          <div class="impact-icon"><span></span></div>
+          <div><small>Business Impact</small><strong>+37.6%</strong><span>vs last quarter</span></div>
+          <div><strong>2.4M+</strong><span>Revenue Generated</span></div>
+          <div><strong>156%</strong><span>Lead Increase</span></div>
+          <div><strong>42%</strong><span>Cost Efficiency</span></div>
+          <div><strong>98%</strong><span>Retention Rate</span></div>
         </div>
       </section>
 
       <footer class="footer">
-        <div class="socials"><span>Like & Follow</span><a href="#">in</a><a href="#">?</a><a href="#">?</a></div>
+        <div class="socials"><span>Like & Follow</span><a href="#">in</a><a href="#">ig</a><a href="#">dr</a></div>
         <img src="assets/logo-mark.png" alt="" />
         <p><strong>Design. Code. Automate. Grow.</strong><span>One partner for your entire digital journey.</span></p>
-        <a href="index.html">Home ?</a>
+        <a href="work.html">Swipe &raquo;</a>
       </footer>
     </main>
 
