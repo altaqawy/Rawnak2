@@ -86,7 +86,6 @@ button, input, select, textarea { font: inherit; }
   height: 58px;
   object-fit: contain;
   border-radius: 50%;
-  mix-blend-mode: screen;
   filter: drop-shadow(0 8px 14px rgba(82, 92, 158, .16));
 }
 .brand span { display: grid; letter-spacing: 3px; line-height: 1.05; }
