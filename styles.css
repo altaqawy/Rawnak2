@@ -37,8 +37,9 @@ button, input, select, textarea { font: inherit; }
   width: 104%;
   height: 115vh;
   object-fit: cover;
-  opacity: .72;
-  filter: saturate(.85) brightness(1.12);
+  opacity: .55;
+  filter: saturate(.9) brightness(1.18);
+  mix-blend-mode: screen;
 }
 .wave-layer {
   position: absolute;
@@ -85,6 +86,8 @@ button, input, select, textarea { font: inherit; }
   height: 58px;
   object-fit: contain;
   border-radius: 50%;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 8px 14px rgba(82, 92, 158, .16));
 }
 .brand span { display: grid; letter-spacing: 3px; line-height: 1.05; }
 .brand strong { font-size: 17px; }
@@ -238,8 +241,8 @@ p { color: var(--muted); line-height: 1.65; font-size: 17px; }
   top: 42px;
   width: 108%;
   max-width: 760px;
-  filter: drop-shadow(0 40px 50px rgba(69,73,111,.18));
-  mix-blend-mode: multiply;
+  filter: drop-shadow(0 40px 50px rgba(69,73,111,.18)) brightness(1.08);
+  mix-blend-mode: screen;
   animation: floatBuilding 7s ease-in-out infinite;
 }
 .metric-card, .ai-card, .glass-card, .process-panel, .feature-strip, .capabilities, .work-card, .price-card, .contact-form, .contact-cards a, .about-media, .values article, .case-dashboard, .outcomes {
