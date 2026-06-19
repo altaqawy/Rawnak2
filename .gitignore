@@ -2,3 +2,14 @@
 server.log
 server.err.log
 *.tmp
+node_modules/
+.next/
+out/
+.vercel/
+.playwright-cli/
+backups/
+output/
+audit-screenshots/
+*-screenshots/
+tsconfig.tsbuildinfo
+npm-debug.log*
